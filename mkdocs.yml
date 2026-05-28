@@ -28,6 +28,123 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/cumulonimbus1914/ts-cnn-gru-repowiki
+
+nav:
+  - Home:
+      - System Overview: System Overview.md
+      - Getting Started: Getting Started.md
+      - Configuration Management: Configuration Management.md
+  - Architecture:
+      - Overview: Architecture & Design/Architecture & Design.md
+      - Data Pipeline:
+          - Overview: Architecture & Design/Data Pipeline Design/Data Pipeline Design.md
+          - Data Validation: Architecture & Design/Data Pipeline Design/Data Validation & Quality Control.md
+          - Dataset Architecture: Architecture & Design/Data Pipeline Design/Dataset Architecture & Implementation.md
+          - Feature Engineering: Architecture & Design/Data Pipeline Design/Feature Engineering & Preprocessing.md
+          - HDF5 Storage: Architecture & Design/Data Pipeline Design/HDF5 Storage & Data Access.md
+      - Neural Network:
+          - Overview: Architecture & Design/Neural Network Architecture/Neural Network Architecture.md
+          - CNN Backbone: Architecture & Design/Neural Network Architecture/CNN Backbone - MobileNetV2.md
+          - Multi-Modal Features: Architecture & Design/Neural Network Architecture/Multi-Modal Feature Integration.md
+          - Optical Flow: Architecture & Design/Neural Network Architecture/Optical Flow Feature Extraction.md
+          - Output Heads: Architecture & Design/Neural Network Architecture/Output Heads - Multi-Task Learning.md
+          - Spatial Skip: Architecture & Design/Neural Network Architecture/Spatial Skip Connections.md
+          - Temporal GRU: Architecture & Design/Neural Network Architecture/Temporal Fusion with GRU.md
+  - Data Pipeline:
+      - Overview: Data Processing Pipeline/Data Processing Pipeline.md
+      - Dataset Construction: Data Processing Pipeline/Dataset Construction.md
+      - Meteorological Data: Data Processing Pipeline/Meteorological Data Integration.md
+      - Preprocessing: Data Processing Pipeline/Preprocessing Pipeline.md
+      - Raw Data: Data Processing Pipeline/Raw Data Handling.md
+  - Training:
+      - Overview: Model Training System/Model Training System.md
+      - Loss Functions:
+          - Overview: Model Training System/Advanced Loss Functions/Advanced Loss Functions.md
+          - Asymmetric Time-Aware: Model Training System/Advanced Loss Functions/Asymmetric Time-Aware Loss.md
+          - Evidential Binary: Model Training System/Advanced Loss Functions/Evidential Binary Loss.md
+          - Focal Loss: Model Training System/Advanced Loss Functions/Focal Loss with Late Penalty.md
+          - Heteroscedastic: Model Training System/Advanced Loss Functions/Heteroscedastic Loss.md
+          - Intensity Regression: Model Training System/Advanced Loss Functions/Intensity Regression Loss.md
+          - Temporal Consistency: Model Training System/Advanced Loss Functions/Temporal Consistency Loss.md
+      - Optimization:
+          - Overview: Model Training System/Optimization & Scheduling/Optimization & Scheduling.md
+          - Class-Balanced Sampling: Model Training System/Optimization & Scheduling/Class-Balanced Sampling & OHEM.md
+          - Early Stopping: Model Training System/Optimization & Scheduling/Early Stopping & Convergence Monitoring.md
+          - Gradient Management: Model Training System/Optimization & Scheduling/Gradient Management & Optimization.md
+          - LR Scheduling: Model Training System/Optimization & Scheduling/Learning Rate Scheduling.md
+          - SWA: Model Training System/Optimization & Scheduling/Stochastic Weight Averaging (SWA).md
+      - Evaluation:
+          - Overview: Model Training System/Training Evaluation & Metrics/Training Evaluation & Metrics.md
+          - Bootstrap CI: Model Training System/Training Evaluation & Metrics/Bootstrap Confidence Interval Analysis.md
+          - Event-Based Metrics: Model Training System/Training Evaluation & Metrics/Event-Based Metrics & Analysis.md
+          - Frame-Level Metrics: Model Training System/Training Evaluation & Metrics/Frame-Level Metrics.md
+          - Severity-Weighted: Model Training System/Training Evaluation & Metrics/Severity-Weighted Metrics.md
+          - Temporal Post-Processing: Model Training System/Training Evaluation & Metrics/Temporal Post-Processing.md
+          - Threshold Optimization: Model Training System/Training Evaluation & Metrics/Threshold Optimization & Selection.md
+      - Orchestration:
+          - Overview: Model Training System/Training Orchestration & Pipeline/Training Orchestration & Pipeline.md
+          - Checkpointing: Model Training System/Training Orchestration & Pipeline/Checkpointing & State Management.md
+          - Configuration: Model Training System/Training Orchestration & Pipeline/Configuration Management.md
+          - Logging: Model Training System/Training Orchestration & Pipeline/Logging & Monitoring System.md
+          - Pipeline Management:
+              - Overview: Model Training System/Training Orchestration & Pipeline/Pipeline Management & Execution/Pipeline Management & Execution.md
+              - Checkpoint & Resume: Model Training System/Training Orchestration & Pipeline/Pipeline Management & Execution/Checkpoint & Resume System.md
+              - Cross-Validation: Model Training System/Training Orchestration & Pipeline/Pipeline Management & Execution/Cross-Validation Management.md
+              - Model Selection: Model Training System/Training Orchestration & Pipeline/Pipeline Management & Execution/Model Selection Criteria.md
+              - Execution Flow: Model Training System/Training Orchestration & Pipeline/Pipeline Management & Execution/Training Execution Flow.md
+  - Evaluation:
+      - Overview: Evaluation & Analysis/Evaluation & Analysis.md
+      - Diagnostics:
+          - Overview: Evaluation & Analysis/Diagnostic Analysis & Interpretability/Diagnostic Analysis & Interpretability.md
+          - Failure Diagnosis: Evaluation & Analysis/Diagnostic Analysis & Interpretability/Failure Pattern Diagnosis and Troubleshooting.md
+          - Performance Metrics: Evaluation & Analysis/Diagnostic Analysis & Interpretability/Performance Metric and Threshold Analysis.md
+          - Severity Analysis: Evaluation & Analysis/Diagnostic Analysis & Interpretability/Severity Category and Pattern Analysis.md
+          - SHAP Analysis: Evaluation & Analysis/Diagnostic Analysis & Interpretability/SHAP Feature Attribution Analysis.md
+          - Temporal Attention: Evaluation & Analysis/Diagnostic Analysis & Interpretability/Temporal Attention Mechanism Analysis.md
+      - Performance:
+          - Overview: Evaluation & Analysis/Performance Metrics & Evaluation/Performance Metrics & Evaluation.md
+          - Basic Metrics: Evaluation & Analysis/Performance Metrics & Evaluation/Basic Performance Metrics.md
+          - Event-level: Evaluation & Analysis/Performance Metrics & Evaluation/Event-level Metrics & Analysis.md
+          - Statistical Testing: Evaluation & Analysis/Performance Metrics & Evaluation/Statistical Significance Testing.md
+          - Temporal Smoothing: Evaluation & Analysis/Performance Metrics & Evaluation/Temporal Post-processing & Smoothing.md
+          - Threshold Selection: Evaluation & Analysis/Performance Metrics & Evaluation/Threshold Optimization & Selection.md
+      - Uncertainty:
+          - Overview: Evaluation & Analysis/Uncertainty Quantification & Calibration/Uncertainty Quantification & Calibration.md
+          - Evidential DL: Evaluation & Analysis/Uncertainty Quantification & Calibration/Evidential Deep Learning & Beta Distribution Modeling.md
+          - Failure Cases: Evaluation & Analysis/Uncertainty Quantification & Calibration/Failure Case Analysis & Error Characterization.md
+          - Reliability: Evaluation & Analysis/Uncertainty Quantification & Calibration/Reliability Analysis & Visualization.md
+          - Temperature Scaling: Evaluation & Analysis/Uncertainty Quantification & Calibration/Temperature Scaling & Confidence Calibration.md
+      - Validation:
+          - Overview: Evaluation & Analysis/Validation & Testing Framework/Validation & Testing Framework.md
+          - Cross-Validation: Evaluation & Analysis/Validation & Testing Framework/Cross-Validation Methodology.md
+          - Failure Analysis: Evaluation & Analysis/Validation & Testing Framework/Failure Analysis & Error Characterization.md
+          - Performance: Evaluation & Analysis/Validation & Testing Framework/Performance Metrics & Evaluation.md
+          - Calibration: Evaluation & Analysis/Validation & Testing Framework/Threshold Optimization & Calibration.md
+          - Uncertainty: Evaluation & Analysis/Validation & Testing Framework/Uncertainty Assessment & Reliability Testing.md
+  - Reports:
+      - Overview: Performance Reports & Analysis/Performance Reports & Analysis.md
+      - Evaluation: Performance Reports & Analysis/Evaluation Reports.md
+      - Failure Analysis: Performance Reports & Analysis/Failure Analysis & Error Investigation.md
+      - Log Management: Performance Reports & Analysis/Log Management & Training History.md
+      - Model Audits: Performance Reports & Analysis/Model Audits & Technical Reviews.md
+      - Comparisons: Performance Reports & Analysis/Training Comparisons & Experimental Analysis.md
+  - Utilities:
+      - Overview: Utilities & Development Tools/Utilities & Development Tools.md
+      - Analysis & Viz: Utilities & Development Tools/Analysis & Visualization Tools.md
+      - Dev & Testing: Utilities & Development Tools/Development & Testing Tools.md
+      - Preprocessing: Utilities & Development Tools/Preprocessing & Validation Tools.md
+      - Feature Engineering:
+          - Overview: Utilities & Development Tools/Feature Engineering Utilities/Feature Engineering Utilities.md
+          - METAR Extractor: Utilities & Development Tools/Feature Engineering Utilities/METAR Feature Extractor.md
+          - Solar Angle: Utilities & Development Tools/Feature Engineering Utilities/Solar Zenith Angle Computation.md
+      - Spatial Analysis:
+          - Overview: Utilities & Development Tools/Spatial Analysis Utilities/Spatial Analysis Utilities.md
+          - Center Detection: Utilities & Development Tools/Spatial Analysis Utilities/Center Detection Algorithms.md
+          - Distance Maps: Utilities & Development Tools/Spatial Analysis Utilities/Distance Maps Generation.md
+          - Gaussian Masks: Utilities & Development Tools/Spatial Analysis Utilities/Gaussian Weight Masks.md
+          - Transformations: Utilities & Development Tools/Spatial Analysis Utilities/Spatial Transformations.md
+          - Static Masks: Utilities & Development Tools/Spatial Analysis Utilities/Static Mask Generation.md
