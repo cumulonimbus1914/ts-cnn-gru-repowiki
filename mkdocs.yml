@@ -23,10 +23,19 @@ markdown_extensions:
   - codehilite
   - admonition
   - pymdownx.highlight
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed
   - pymdownx.arithmatex:
       generic: true
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - javascripts/mermaid.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
   social:
@@ -145,3 +154,4 @@ nav:
           - Gaussian Masks: Utilities & Development Tools/Spatial Analysis Utilities/Gaussian Weight Masks.md
           - Transformations: Utilities & Development Tools/Spatial Analysis Utilities/Spatial Transformations.md
           - Static Masks: Utilities & Development Tools/Spatial Analysis Utilities/Static Mask Generation.md
+
