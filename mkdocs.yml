@@ -34,10 +34,7 @@ extra:
       link: https://github.com/cumulonimbus1914/ts-cnn-gru-repowiki
 
 nav:
-  - Home:
-      - System Overview: System Overview.md
-      - Getting Started: Getting Started.md
-      - Configuration Management: Configuration Management.md
+  - Home: index.md
   - Architecture:
       - Overview: Architecture & Design/Architecture & Design.md
       - Data Pipeline:
